@@ -11,7 +11,7 @@
 
 #### File Storage
 
-![](/graph/01-storage/01.png)
+<img src="./graph/01-storage/01.png"  />
 
 - 使用**buffer pool**的原因是使内存看起来能装下所有的文件。
 - 如果操作系统的虚拟内存机制
@@ -20,16 +20,15 @@
 
 #### Page Layout
 
-![](/graph/01-storage/02.png)
 
-
+<img src="./graph/01-storage/02.png" width="250px" />
 
 
 
 
 #### Tuple Layout
 
-![](/graph/01-storage/03.png)
+<img src="./graph/01-storage/03.png" width="250px" />
 
 
 
