@@ -11,7 +11,7 @@
 
 #### File Storage
 
-<img src="./graph/01-storage/01.png"  />
+<img src="./graph/01-storage/01.png" width="600px"  />
 
 - 使用**buffer pool**的原因是使内存看起来能装下所有的文件。
 - 如果操作系统的虚拟内存机制
@@ -20,9 +20,32 @@
 
 #### Page Layout
 
+最少有两种方式存储 Page 
+
+- Tuple-oriented
+- Log-structured 
+
+
+##### Tuple-oriented
 
 <img src="./graph/01-storage/02.png" width="250px" />
 
+##### Log-structured 
+
+
+<img src="./graph/01-storage/04.png" width="250px" />
+
+
+*优点*
+
+- 速度块
+    - 如果是Tuple-oriented类型的数据库，我们有十条数据要更新，但是十条数据在十个不同的page上，那么我们需要将每一个page读取到内存里，然后再写回去。但是如果是Log-structured类型的数据库，我们只需要将数据添加到一个新的page上。
+- 分布式系统常用
+    - 分布式系统没法访问每个数据存储的位置，所以采用log的形式追加。[??? 为啥不能访问每个数据的位置]
+
+
+*缺点*
+- 读取慢
 
 
 
@@ -30,6 +53,52 @@
 
 <img src="./graph/01-storage/03.png" width="250px" />
 
+数据库中存储大文件的方法
+
+<img src="./graph/01-storage/06.png" width="250px" />
+
+#### Data Representation
+
+
+
+<img src="./graph/01-storage/05.png" width="600px"  />
+
+
+
+#### 数据库的Workload
+
+**On-Line Transaction Processing (OLTP)**
+- Fast operations that only read/update a small amount of data each time.
+
+**On-Line Analytical Processing (OLAP)**
+
+- Complex queries that read a lot of data to compute aggregates.
+
+**Hybrid Transaction + Analytical Processing**
+- OLTP + OLAP together on the same database instance
+
+
+<img src="./graph/01-storage/07.png" width="600px"  />
+
+
+
+
+行存储的tuple做OLTP很快，但是做OLAP会读取没用的数据进入内存，浪费资源
+
+
+
+
+
+
+### 问题二
+
+
+#### Buffer Pool Manager
+
+#### Replacement Policies
+
+
+#### Other Memory Pools
 
 
 
