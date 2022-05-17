@@ -95,7 +95,13 @@
 
 #### Buffer Pool Manager
 
+维护一些数据
+- Dirty Flag 
+- Pin/Reference Counter
+
 #### Replacement Policies
+
+
 
 
 #### Other Memory Pools
