@@ -96,8 +96,8 @@
 #### Buffer Pool Manager
 
 维护一些数据
-- Dirty Flag 
-- Pin/Reference Counter
+- Dirty Flag: 我们从磁盘中读取page后，page是否被修改
+- Pin/Reference Counter: 跟踪当前page的线程数量或者正在查询该page的数量
 
 #### Replacement Policies
 
