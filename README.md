@@ -95,6 +95,7 @@
 
 #### Buffer Pool Manager
 
+<<<<<<< HEAD
 大多数数据库使不使用direct I/O([O_DIRECT](https://linux.die.net/man/2/open))，优点和缺点分别是什么???
 
 
@@ -107,10 +108,18 @@
 
 ## 数据库的索引
 
+=======
+维护一些数据
+- Dirty Flag: 我们从磁盘中读取page后，page是否被修改
+- Pin/Reference Counter: 跟踪当前page的线程数量或者正在查询该page的数量
+
+#### Replacement Policies
+>>>>>>> af972fb03d4b154f12b3c26cf4d8a4cb54d77f70
 
 
 
 
+#### Other Memory Pools
 
 
 
