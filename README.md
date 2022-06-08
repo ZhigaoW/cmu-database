@@ -95,11 +95,17 @@
 
 #### Buffer Pool Manager
 
+大多数数据库使不使用direct I/O([O_DIRECT](https://linux.die.net/man/2/open))，优点和缺点分别是什么???
+
+
+
 #### Replacement Policies
 
 
 #### Other Memory Pools
 
+
+## 数据库的索引
 
 
 
